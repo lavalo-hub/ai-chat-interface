@@ -2,7 +2,6 @@ import React from 'react';
 import { FiPlus, FiMenu, FiX, FiTrash2, FiSettings } from 'react-icons/fi';
 import { useChatStore } from '../store/chatStore';
 import { formatDistanceToNow } from 'date-fns';
-import { ruRU } from 'date-fns/locale';
 import { motion } from 'framer-motion';
 
 const Sidebar: React.FC = () => {
@@ -67,7 +66,6 @@ const Sidebar: React.FC = () => {
                     <p className="text-gray-500 text-xs mt-1">
                       {formatDistanceToNow(new Date(conv.updatedAt), {
                         addSuffix: true,
-                        locale: ruRU,
                       })}
                     </p>
                   </div>
